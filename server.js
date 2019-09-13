@@ -1,9 +1,8 @@
 const express = require('express');
-
 const app = express();
 
+// Extract from firestore
 app.get('/', (req, res) => {
-    // Receive this eventually from firebase
     const data = [
         
     ]
