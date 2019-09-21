@@ -4,7 +4,7 @@ const app = express();
 // Extract from firestore
 app.get('/', (req, res) => {
     const data = [
-        
+        {name: 'Alex', age: 20}
     ]
 
     res.json(data);

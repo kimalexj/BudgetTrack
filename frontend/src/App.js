@@ -16,10 +16,11 @@ class App extends Component {
     })
   } 
 
-  logout = () => {
-    this.setState({
-      loggedIn: false
-    })
+  // Example of server communication
+  componentDidMount() {
+    fetch('/')
+        .then(res => res.json())
+        .then(data => console.log(data))
   }
 
   render() {
@@ -28,7 +29,7 @@ class App extends Component {
         <BrowserRouter>
           <Navbar loggedIn={this.state.loggedIn} handleLogin={this.login}/>
           <Switch>
-            <Route exact path="/" component={dashboard} />
+            <Route exact path="/dashboard/:user" component={dashboard} />
             <Route path="/login" component={SignIn}/>
             <Route path="/register" component={SignUp}/>
           </Switch>
