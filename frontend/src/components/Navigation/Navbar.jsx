@@ -8,7 +8,7 @@ const Navbar = (props) => {
     if (props.loggedIn) {
         links = <SignedInLinks />
     } else {
-        links = <RegisterLinks />
+        links = <RegisterLinks handleLogin={props.handleLogin}/>
     }
     
     
