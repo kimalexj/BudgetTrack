@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Recents from './Recents';
 
 class dashboard extends Component {
     render() {
@@ -9,7 +10,7 @@ class dashboard extends Component {
                         
                     </div>
                     <div className="col s12 m5 offset-m1">
-                        
+                        <Recents />
 
                     </div>
                 </div>

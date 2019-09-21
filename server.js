@@ -2,13 +2,13 @@ const express = require('express');
 const app = express();
 
 // Extract from firestore
-app.get('/', (req, res) => {
+app.get('/login', (req, res) => {
     const data = [
-        {name: 'Alex', age: 20}
+        {name: 'Alex', age: 20, id: 45}
     ]
 
     res.json(data);
-});
+})
 
 // Set to 5000 because react default is 3000
 const port = 5000;
